@@ -1,0 +1,37 @@
+<html><head></head><body>
+    <div id="support"></div>
+   <script>
+navigator.geolocation.getCurrentPosition(updateLocation, handleLocationError, {timeout:30000});
+function updateLocation(position) {
+  var latitude = position.coords.latitude;
+  var longitude = position.coords.longitude;
+  var accuracy = position.coords.accuracy;
+  // do something with values
+document.getElementById("support").innerHTML="Latitude: " +latitude + " Longitude: " + longitude;
+}
+
+function handleLocationError(error) {
+switch(error.code) {
+  case 0:
+document.getElementById("support").innerHTML="Unknown Error";
+   // UNKNOWN_ERROR
+   //Error retrieving location
+   break;
+  case 1:
+   // PERMISSION_DENIED
+   //User denied permission
+document.getElementById("support").innerHTML="Permission Error";
+   break;
+  case 2:
+document.getElementById("support").innerHTML="Position Unavailable";
+   // POSITION_UNAVAILABLE
+   //Location technique failed
+  case 3:
+document.getElementById("support").innerHTML="Timeout";
+    // TIMEOUT
+    //Specified timeout reached
+  break;
+ }
+}
+   </script> 
+</body></html>

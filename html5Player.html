@@ -7,44 +7,24 @@
   <script src="jquery.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
 </head><body>
-<div>
 <div class="player">
+    <p>
   <audio controls>
-	<source src="example.mp3" type="audio/mpeg">
+	<source src="audio/example.mp3" type="audio/mpeg">
 	Your browser does not support the audio element.
-  </audio>
+  </audio></p>
 </div>
 <div class="playlist">
-  <p>Playlist Table goes here</p>
-</div>
+  <p><ul id="play-list"></ul></p>
 </div>
 <button class="accordion">Files</button>
 <div class="panel">
-  <p>File list goes here.</p>
-</div>
-<div class="jumbotron text-center">
-  <h1>My First Bootstrap Page</h1>
-  <p>Resize this responsive page to see the effect!</p> 
-</div>
-  
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-  </div>
+  <p>
+      <ul>
+ <li onclick="addItem(this.innerHTML)">Test1</li>
+ <li onclick="addItem(this.innerHTML)">Test2</li>
+ <li onclick="addItem(this.innerHTML)">Test3</li>
+    </ul>  </p>
 </div>
 <script src="js/html5player.js"></script>
 </body></html>
